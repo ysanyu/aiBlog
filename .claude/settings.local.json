@@ -31,7 +31,11 @@
       "Bash(gh --version)",
       "Bash(rm -rf /Users/ysanyu/Desktop/blog/front/.git)",
       "Bash(git rm *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git ls-tree *)",
+      "Bash(git commit *)",
+      "Bash(git remote *)",
+      "Bash(git push *)"
     ]
   }
 }

@@ -155,3 +155,46 @@ npm start
 - macOS 上 5000 端口被 AirPlay 占用，后端使用 5001 端口
 - 前端通过 `package.json` 中的 `proxy` 字段代理到后端
 - 生产环境请修改 `config.py` 中的 `SECRET_KEY` 和 `JWT_SECRET_KEY`
+
+## 零成本部署（Vercel + Supabase）
+
+前后端都部署在 Vercel，数据库用 Supabase 免费版，全部不需要信用卡。
+
+### 1. 创建 Supabase 数据库
+
+1. 打开 https://supabase.com → 注册（GitHub 登录即可）
+2. New Project → 填项目名和数据库密码 → 选择区域（推荐 Northeast Asia）
+3. 创建完成后，进入 Settings → Database → 找到 **Connection string**（URI 格式）
+4. 复制连接地址，形如：`postgresql://postgres.xxxx:你的密码@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres`
+
+### 2. 初始化 Supabase 数据库
+
+```bash
+cd back
+
+# 设置环境变量（替换为你的 Supabase 连接地址）
+export DATABASE_URL="postgresql://postgres.xxxx:你的密码@aws-0-region.pooler.supabase.com:6543/postgres"
+
+# 安装依赖
+pip3 install -r requirements.txt
+
+# 初始化数据库
+python3 supabase_init.py
+```
+
+### 3. 部署到 Vercel
+
+1. 打开 https://vercel.com → 用 GitHub 登录
+2. Import Project → 选 `aiBlog` 仓库
+3. **Root Directory** 保持默认（不填，让 Vercel 自动检测）
+4. 添加环境变量：
+   - `DATABASE_URL` = `你的 Supabase PostgreSQL 连接地址`
+   - `SECRET_KEY` = 随便一个长字符串
+   - `JWT_SECRET_KEY` = 随便一个长字符串
+5. 点击 Deploy → 等几分钟
+
+部署完成后 Vercel 会给你一个 `https://ai-blog-xxx.vercel.app` 的地址。
+
+### 4. 绑定自定义域名（可选）
+
+Vercel → Settings → Domains → 添加你自己的域名

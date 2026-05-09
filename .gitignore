@@ -27,3 +27,6 @@ front/src/styles/字魂夏日诗歌体(商用需授权).ttf
 
 # Claude Code settings
 .claude/
+
+# Render (no longer used)
+render.yaml
