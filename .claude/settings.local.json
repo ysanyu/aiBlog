@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mysql --version)",
+      "Bash(npm --version)",
+      "Bash(pip3 install *)",
+      "Bash(npx create-react-app *)",
+      "Bash(npm install *)",
+      "Bash(python3 init_db.py)",
+      "Bash(mysql -u root -e \"SELECT 1\")",
+      "Bash(/usr/local/mysql/bin/mysql -u root -e \"SELECT 1\")",
+      "Bash(sudo *)",
+      "Bash(mysql -u root -p'')",
+      "Read(//usr/local/mysql/**)",
+      "Read(//private/etc/**)",
+      "Bash(/usr/local/mysql/bin/mysql -u root --socket=/tmp/mysql.sock -e \"SELECT 1\")",
+      "Bash(/usr/local/mysql/bin/mysql -u root --socket=/usr/local/mysql/data/mysqld.sock -e \"SELECT 1\")",
+      "Bash(/usr/local/mysql/support-files/mysql.server start *)",
+      "Bash(python3 *)",
+      "Bash(curl -s http://localhost:5000/api/posts)",
+      "Bash(curl -s http://localhost:5001/api/posts)",
+      "Bash(curl -s http://localhost:5001/api/tags)",
+      "Bash(curl -s http://localhost:5001/api/categories)",
+      "Bash(curl -s http://localhost:5001/api/links)",
+      "Bash(curl -s -X POST http://localhost:5001/api/auth/login -H \"Content-Type: application/json\" -d '{\"username\":\"admin\",\"password\":\"admin123\"}')",
+      "Bash(npm start *)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(curl -s http://localhost:3000/static/media/SummerPoem.ttf)",
+      "Bash(curl *)",
+      "Bash(git --version)",
+      "Bash(gh --version)",
+      "Bash(rm -rf /Users/ysanyu/Desktop/blog/front/.git)",
+      "Bash(git rm *)",
+      "Bash(git add *)"
+    ]
+  }
+}

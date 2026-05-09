@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.env
+
+# Node
+node_modules/
+front/build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploads & Database
+back/uploads/
+back/*.db
+
+# Ignore the Chinese-named font (keep the ASCII copy)
+front/src/styles/字魂夏日诗歌体(商用需授权).ttf
+
+# Claude Code settings
+.claude/

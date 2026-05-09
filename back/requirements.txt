@@ -1,0 +1,16 @@
+# Flask 核心库
+Flask==3.0.0                # Web 框架，用于构建 API 和网页
+Flask-SQLAlchemy==3.1.1     # ORM 工具，用 Python 类操作数据库，无需手写 SQL
+Flask-CORS==4.0.0           # 跨域资源共享，允许前端(不同端口)访问后端 API
+Flask-JWT-Extended==4.6.0   # JWT 认证，用于用户登录后的身份验证
+
+# 数据库驱动
+PyMySQL==1.1.0              # MySQL 数据库驱动，让 Python 能连接 MySQL
+cryptography==41.0.7        # PyMySQL 的加密依赖
+
+# 生产服务器
+gunicorn==21.2.0            # WSGI HTTP 服务器，生产环境替代 Flask 内置服务器
+
+# 工具库
+Werkzeug==3.0.1             # Flask 依赖的工具库，提供密码哈希等安全功能
+Pillow==10.1.0              # 图片处理库，用于处理上传的图片
